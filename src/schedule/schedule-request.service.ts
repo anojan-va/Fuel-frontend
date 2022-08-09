@@ -26,8 +26,18 @@ export class ScheduleRequestService implements OnModuleInit {
                 const eventObj = message.value as any;
                 event = JSON.parse(eventObj);
 
+                // get Random Schedule date within next 7 days
 
-                this.scheduleDto= new ScheduleDto(event.order.orderId,event.order.gasStationId,event.order.fuelType,event.order.quantity)
+                const sdate= new Date();
+                sdate.setDate(sdate.getDate()+Math.random() * 7);
+               // console.log(sdate)
+                const ranDate =sdate.getFullYear()+"-"+sdate.getMonth()+"-"+sdate.getDate();
+                const newDate = new Date(ranDate);
+                console.log(newDate)
+
+
+
+                this.scheduleDto= new ScheduleDto(event.order.orderId,event.order.gasStationId,event.order.fuelType,event.order.quantity,"new")
                 const schdulereturn = this.scheduleService.createSchedule(this.scheduleDto);
                 var schduledId = (await schdulereturn).schduleId;
                 console.log(schduledId);

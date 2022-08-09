@@ -11,12 +11,6 @@ export class ScheduleController {
     getAllSchdule(){
         return this.scheduleService.getScheduleList();
     }
-/*
-    @Post()
-    createSchdule(@Body()scheduleDto: ScheduleDto){
-     //  return this.scheduleService.createSchedule(schduleId,orderId,gasStationId,fuelType,quantity);
-        return this.scheduleService.createSchedule(scheduleDto);
-    }
-*/
+
 
 }

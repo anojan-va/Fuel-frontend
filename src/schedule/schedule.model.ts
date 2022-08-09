@@ -8,9 +8,14 @@ export class Schedule{
     orderId:number;
     @Column({name:'station_id'})
     gasStationId:string;
+    @Column({name:'schdule_date'})
+    schduleDate:string;
     @Column({name:'fuel_type'})
     fuelType:String;
     @Column({name:'quantity'})
     quantity:number;
+    
+ 
+
     
 }

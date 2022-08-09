@@ -3,13 +3,16 @@ export class ScheduleDto{
     gasStationId: string;
     fuelType: String;   
     quantity: number;
+    schduleDate:string;
    
 
-    constructor(orderId:number,gasStationId:string,fuelType:string,quantity: number){
+    constructor(orderId:number,gasStationId:string,fuelType:string,quantity: number,schduleDate:string){
         this.orderId=orderId;
         this.gasStationId=gasStationId;
         this.fuelType=fuelType;
         this.quantity=quantity;
+        this.schduleDate=schduleDate;
+
     }
 
     public get orderIds(): number {
