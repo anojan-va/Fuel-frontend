@@ -7,22 +7,26 @@ import { MESSAGES } from '@nestjs/core/constants';
 
 
 @Injectable()
-export class ScheduleResponseService {
+export class TestResponseService {
     
     constructor(private readonly producerService:ProducerService) {}
    //
 
     async scheduleResponse(event:OrderEvent){
+
+        
+        console.log(event.order.orderId);
         await this.producerService.produce({
-            topic:'schedule-topic',
+            topic:'tess',
             messages: [{
-              //value: JSON.stringify(event),
-              value: "event.order.orderId",
+              //value: JSON.parse(JSON.stringify(event)),
+              value: 'event.order.orderId',
 
            
             
             },],
         });
+        console.log("Test response below hits");
 
         
         return 'Hello World...!';

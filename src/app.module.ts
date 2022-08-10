@@ -11,7 +11,7 @@ import { KafkaModule } from './kafka/kafka.module';
     port: 3306,
     username: 'root',
     password: '',
-    database: 'schedulDB',
+    database: 'scheduleDB',
     entities: entities,
     synchronize: true,
 

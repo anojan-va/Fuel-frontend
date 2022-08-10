@@ -9,7 +9,7 @@ export class Schedule{
     @Column({name:'station_id'})
     gasStationId:string;
     @Column({name:'schdule_date'})
-    schduleDate:string;
+    schduleDate:Date;
     @Column({name:'fuel_type'})
     fuelType:String;
     @Column({name:'quantity'})
